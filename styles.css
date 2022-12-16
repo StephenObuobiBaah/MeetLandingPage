@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin:0 auto;
+    background-color: rgb(245, 245, 245);
+    width: 90%;
+    height:100vh;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.Main-Content{
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    gap: 4rem;
+    background-color:rgb(250, 250, 250);;
+}
+h1{
+    font-size: 54px;
+    line-height: 54px;
+    text-transform: capitalize;
+}
+h1 span{
+    text-transform: lowercase;
+}
+h2{
+    font-size: 35px;
+    line-height: 35px;
+}
+p{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.Logo{
+    margin-top: 40px; 
+  }
+ .Logo:hover{
+     outline: 2px solid rgb(61, 118, 243); 
+  }
+ 
+.Main-Section{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.Hover_overllay{
+    width: 95%;
+    height: 300px;
+    position: absolute;
+}
+.Hover_overllay:hover{
+    outline: 3px solid rgba(61, 118, 243,0.5);
+}
+.Image-Left{
+   padding-bottom: 30px;
+   margin-left: -80px;
+}
+.Image-Right{
+    padding-top: 30px;
+    margin-right: -80px;
+ }
+.Hero{
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+}
+.Hero-Text{
+    text-align: center;
+    padding-top: 40px;
+}
+.Hero-Text p{
+    padding: 35px 5px 35px 5px;
+}
+.Hero-Text h1{
+    padding: 0 40px 0 40px;
+}
+.Hero button{
+    width: 120px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: rgb(77, 150, 168);
+    border: none;
+    color: rgb(250, 250, 250);
+}
+.Hero button span{
+    color: rgb(143, 227, 249);
+}
+.Hero button:nth-of-type(2){
+    width: 90px;
+    background-color: rgb(133, 95, 177);
+    margin-left: 15px;
+}
+
+
+.Thermometer{
+    width: 40px;
+    height: 80px;
+    display: grid;
+    justify-content: center;
+}
+.Thermometer:hover{
+    outline: 2px solid rgb(61, 118, 243);
+}
+.Pin{
+    width: 1px;
+    height: 40px;
+    background-color: rgba(40, 40, 61, 0.2);
+    margin: 0 auto;
+}
+.Thermometer button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(40, 40, 61, 0.2);
+    margin: 0 auto;
+}
+
+.Meeting-Images-Section:hover{
+    outline: 3px solid rgba(61, 118, 243,0.5)
+}
+.Meeting-Images{
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+.Meeting-Images img{ 
+    border-radius: 10px;
+}
+
+.Meeting-Text{
+    width: 37%;
+    height: 195px;
+    margin: 0 auto;
+}
+.Meeting-Text span, h2, p{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px 0 10px;
+}   
+.Meeting-Text h2{
+    padding: 20px 40px 20px 40px;
+}
+.Meeting-Text span{
+    color: rgb(77, 150, 168);
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 4px;
+}
+.Meeting-Text:hover{  
+    outline: 3px solid rgba(61, 118, 243,0.5)
+}
+
+.Footer-Section{
+    width: 100%;
+    height: 280px;
+    display: grid;
+    align-content: center;
+    margin-bottom: 40px;
+}
+.Footer-Section .Thermometer{
+    margin: 0 auto;
+    margin-bottom: -20px;
+    z-index: 1;
+}
+.Footer{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-image: url("/assets/desktop/image-footer.jpg");
+    background-repeat: no-repeat;
+    background-position: center 50%;
+    position: relative;
+}
+.Footer_Color_Overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(77, 150, 168,0.7);
+    position: absolute;
+}
+.Hover_Overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.Footer-Text{
+    width: 70%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(250, 250, 250);
+    z-index: 1;
+}
+.Hover_Overlay:hover{  
+    outline:3px solid rgb(61, 176, 243)
+}
+.Footer-Text:hover{  
+    outline:3px solid rgb(72, 182, 245)
+}
+.Footer p{
+    width: 350px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 50px 0 10px ;
+}
+.Footer h2{
+    text-align: left;
+}
+.Footer button{
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    background-color:  rgb(133, 95, 177);
+    border: none;
+    color: rgb(250, 250, 250);
+}
+.Footer button span{
+    color:rgba(250, 250, 250,0.7);
+}
