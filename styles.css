@@ -1,103 +1,136 @@
+:root{
+    --Hover-Color:rgb(61, 118, 243);
+    --Button-Color1:rgb(77, 150, 168);
+    --Button-Color2: rgb(133, 95, 177);
+    --Footer-Text-Color: rgb(250, 250, 250);
+}  
+
 *{
     margin: 0;
     padding: 0;
 }
-
 body{
-    margin:0 auto;
+    min-width: 375px;
+    min-height: 2215px;
     background-color: rgb(245, 245, 245);
-    width: 90%;
-    height:100vh;
     box-sizing: border-box;
     font-family: 'Red Hat Display', sans-serif;
 }
-
-.Main-Content{
-    margin: 0 auto;
-    display: grid;
-    justify-items: center;
-    gap: 4rem;
-    background-color:rgb(250, 250, 250);;
-}
 h1{
-    font-size: 54px;
-    line-height: 54px;
+    font-size: 40px;
+    line-height: 44px;
     text-transform: capitalize;
+    padding: 0 40px 0 40px;
 }
 h1 span{
     text-transform: lowercase;
 }
 h2{
-    font-size: 35px;
-    line-height: 35px;
+    font-size: 32px;
+    line-height: 36px;
 }
 p{
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 26px;
+    color: #87879D;
+}
+.Main-Content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:4rem;
+    margin: 0 auto;
+    background-color:rgb(252, 252, 252);
+}
+.Logo{
+    max-width: fit-content;
+    margin-top: 60px; 
+}
+.Logo:hover{
+    outline: 2px solid var(--Hover-Color); 
 }
 
-.Logo{
-    margin-top: 40px; 
-  }
- .Logo:hover{
-     outline: 2px solid rgb(61, 118, 243); 
-  }
- 
 .Main-Section{
     width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-evenly;
-    overflow: hidden;
+    height: 550px;
+    position: relative;
 }
-.Hover_overllay{
-    width: 95%;
-    height: 300px;
+.Hero{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}  
+.Hero-Image-Right,.Hero-Image-Left{
+    display: none;
+}
+.Hero-Image{
+    max-width: 100%;
+    
+}
+#Hero-Image-Hover::before, #Hero-Image-Hover::after{
+    content: " ";
+    height: 100%;
+    width: calc(105% - 102.5%);
+    background-color: rgb(245, 245, 245);
     position: absolute;
 }
-.Hover_overllay:hover{
-    outline: 3px solid rgba(61, 118, 243,0.5);
+#Hero-Image-Hover::before{
+    left: 0;
 }
-.Image-Left{
-   padding-bottom: 30px;
-   margin-left: -80px;
+#Hero-Image-Hover::after{
+    right: 0;
 }
-.Image-Right{
-    padding-top: 30px;
-    margin-right: -80px;
- }
-.Hero{
-    width: 100%;
-    height: 90%;
-    object-fit: contain;
+#Hero-Image-Hover{
+    width: 105%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 .Hero-Text{
-    text-align: center;
-    padding-top: 40px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 .Hero-Text p{
-    padding: 35px 5px 35px 5px;
+    margin: 20px 0 20px 0;
 }
-.Hero-Text h1{
-    padding: 0 40px 0 40px;
+.Hero label:hover, #Hero-Image-Hover:hover{
+    outline: 3px solid var(--Hover-Color);
 }
-.Hero button{
+.Hero-Text h1:hover, .Hero-Text p:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--Hover-Color);
+}
+button{
     width: 120px;
     height: 40px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
     border-radius: 40px;
-    background-color: rgb(77, 150, 168);
+    background-color: var(--Button-Color1);
     border: none;
-    color: rgb(250, 250, 250);
+    color: var(--Footer-Text-Color);
 }
 .Hero button span{
     color: rgb(143, 227, 249);
-}
-.Hero button:nth-of-type(2){
-    width: 90px;
-    background-color: rgb(133, 95, 177);
+} 
+.Second-Button{
+    width: 80px;
+    background-color: var(--Button-Color2);
     margin-left: 15px;
-}
-
+    margin: 0 auto;
+}   
 
 .Thermometer{
     width: 40px;
@@ -105,8 +138,8 @@ p{
     display: grid;
     justify-content: center;
 }
-.Thermometer:hover{
-    outline: 2px solid rgb(61, 118, 243);
+.Thermometer-Section .Thermometer:hover{
+    outline: 2px solid var(--Hover-Color);
 }
 .Pin{
     width: 1px;
@@ -118,39 +151,39 @@ p{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    color: rgb(40, 40, 61);
+    background-color: rgb(245, 245, 245);
     border: 1px solid rgba(40, 40, 61, 0.2);
     margin: 0 auto;
 }
 
-.Meeting-Images-Section:hover{
-    outline: 3px solid rgba(61, 118, 243,0.5)
+.Meeting-Images:hover{
+    outline: 3px solid var(--Hover-Color);
 }
 .Meeting-Images{
-    width: 80%;
-    height: 200px;
-    display: flex;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 1rem;
 }
 .Meeting-Images img{ 
+    max-width:100%;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .Meeting-Text{
-    width: 37%;
-    height: 195px;
-    margin: 0 auto;
-}
-.Meeting-Text span, h2, p{
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
+    max-width: 100%;
     text-align: center;
-    padding: 0 10px 0 10px;
+}
+.Meeting-Text span, p{
+    padding: 0 12px 0 12px;
+    margin: 0 auto;
 }   
 .Meeting-Text h2{
-    padding: 20px 40px 20px 40px;
+    padding: 20px 10px 20px 10px;
 }
 .Meeting-Text span{
     color: rgb(77, 150, 168);
@@ -159,77 +192,273 @@ p{
     letter-spacing: 4px;
 }
 .Meeting-Text:hover{  
-    outline: 3px solid rgba(61, 118, 243,0.5)
+    outline: 3px solid var(--Hover-Color);
 }
 
 .Footer-Section{
-    width: 100%;
-    height: 280px;
+    max-width: 100%;
+    max-height: 500px;
     display: grid;
     align-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+.Footer-Section:hover{  
+    outline: 3px solid var(--Hover-Color);
 }
 .Footer-Section .Thermometer{
     margin: 0 auto;
     margin-bottom: -20px;
     z-index: 1;
-}
+}    
 .Footer{
-    width: 100%;
-    height: 280px;
+    max-width: 100%;
+    height: 400px;
     display: flex;
-    justify-items: center;
     align-items: center;
-    background-image: url("/assets/desktop/image-footer.jpg");
+    background-image: url("/assets/mobile/image-footer.jpg");
     background-repeat: no-repeat;
-    background-position: center 50%;
+    background-size: cover;
+    background-position: center 10%;
     position: relative;
+}
+.Footer-Text{
+    max-width: 85%;
+    max-height: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    color: var(--Footer-Text-Color);
+    margin-top: 40px;
+    z-index: 1;
 }
 .Footer_Color_Overlay{
     width: 100%;
     height: 100%;
-    background: rgba(77, 150, 168,0.7);
+    background: rgba(77, 150, 168,0.9);
     position: absolute;
-}
-.Hover_Overlay{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 1;
-}
-.Footer-Text{
-    width: 70%;
-    height: 80px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: rgb(250, 250, 250);
-    z-index: 1;
-}
-.Hover_Overlay:hover{  
-    outline:3px solid rgb(61, 176, 243)
-}
-.Footer-Text:hover{  
-    outline:3px solid rgb(72, 182, 245)
-}
-.Footer p{
-    width: 350px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 0 50px 0 10px ;
-}
-.Footer h2{
-    text-align: left;
 }
 .Footer button{
-    width: 150px;
-    height: 40px;
     border-radius: 40px;
-    background-color:  rgb(133, 95, 177);
+    background-color:  var(--Button-Color2);
     border: none;
-    color: rgb(250, 250, 250);
+    color: var(--Footer-Text-Color);
 }
 .Footer button span{
     color:rgba(250, 250, 250,0.7);
+}
+.Footer p{
+    color: var(--Footer-Text-Color);
+}
+
+@media  screen and (min-width:768px){
+    body{
+        min-height: 2128px;
+    }
+    h1{
+        font-size: 48px;
+        line-height: 48px;
+    }
+    h2{
+        font-size: 40px;
+        line-height: 44px;
+    }
+    
+    .Hero{
+        gap: 4rem;
+    }
+    .Hero-Text{
+        max-width: 60%;
+        display: block;
+    }
+    .Hero-Text:hover{
+        outline: 3px solid var(--Hover-Color);
+    }
+    .Hero label:hover{
+        outline: 0px solid var(--Hover-Color);
+    }
+    .Hero-Text h1:hover, .Hero-Text p:hover{
+        text-decoration: none;
+    }
+    
+    .Hero button span{
+        color: rgb(143, 227, 249);
+    } 
+    .Second-Button{
+        margin-left: 10px;
+    }
+
+    .Meeting-Images{
+        max-width: 90%;
+        display: flex;
+    }
+    .Meeting-Images img{ 
+        max-width:23.2%;
+    }
+
+    .Meeting-Text{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .Meeting-Text p{
+        margin: 0 -20px 0 -20px;
+    }   
+    .Meeting-Text h2{
+        padding: 20px 60px 20px 60px;
+    }
+   
+    .Footer{
+        background-image: url("/assets/tablet/image-footer.jpg");
+    }
+    .Footer-Text{
+        max-width: 85%;
+    }
+    .Footer-Text h2{
+        padding: 0 60px 0 60px;
+    }
+    .Footer-Text p{
+        font-size: 18px;
+        line-height: 26px;
+    }
+   
+}
+
+
+@media  screen and (min-width:1440px){
+    body{
+        min-height: 1895px;
+    }
+    h1{
+        font-size: 64px;
+        line-height: 64px;
+    }
+    h2{
+        font-size: 40px;
+        line-height: 44px;
+    }
+    p{
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .Main-Section{
+        width: 105%;
+        height: 370px;
+    }
+    .Main-Section::before, .Main-Section::after{
+        content: " ";
+        height: 100%;
+        width: calc(105% - 102.5%);
+        background-color: rgb(245, 245, 245);
+        position: absolute;
+        z-index: 1;
+    }
+    .Main-Section::before{
+        left: 0;
+    }
+    .Main-Section::after{
+        right: 0;
+        top: 0%;
+    }
+    .Main-Section:hover{  
+        outline:3px solid var(--Hover-Color);
+    }
+    .Hero{
+        flex-direction: row;
+        gap: 2rem;
+    }  
+    .Hero-Image-Right,.Hero-Image-Left{
+        max-width: 100%;
+        display: block;
+    }
+    .Hero-Image-Right{
+        padding-top: 70px;
+    }
+    .Hero-Image-Left{
+        padding-bottom: 70px;
+    }
+    #Hero-Image-Hover{
+        display: none;
+    }
+    .Hero-Text{
+        max-width: 39%;
+        display: block;
+        padding-top: 60px;
+        margin: 0 -10px 0 -10px;
+    }
+    .Hero-Text:hover{
+        outline: 0px solid var(--Hover-Color);
+    }
+    .Hero-Text p{
+        margin: 35px 0 35px 0;
+    }
+    .Hero-Text button:hover, .Footer-Text button:hover{
+       opacity: 0.7;
+       cursor: pointer;
+    }  
+    
+    .Meeting-Images{
+        max-width: 80%;
+        display: flex;
+    }
+    .Meeting-Images img{ 
+        max-width:24%;
+    }
+
+    .Meeting-Text{
+        max-width: 40%;
+    }
+    .Meeting-Text  p{
+        padding: 0 13px 0 13px;
+        margin: 0 auto;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }   
+    .Meeting-Text h2{
+        padding: 20px 40px 20px 40px;
+    }
+
+    .Footer{
+        max-width: 100%;
+        height: 400px;
+        background-image: url("/assets/desktop/image-footer.jpg");
+    }
+    .Footer-Text{
+        max-width: 80%;
+        max-height: 60%;
+        flex-direction: row;
+    }
+    .Footer p{
+        width: 45%;
+        text-align: left;
+    }
+    .Footer h2{
+        text-align: left;
+    }
+    .Hover_Overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .Hover_Overlay:hover, .Footer-Text:hover{  
+        outline:3px solid var(--Hover-Color);
+    }
+    .Footer-Section:hover{  
+        outline: 0px solid var(--Hover-Color)
+    }
+    .Footer button{
+        width: 200px;
+    }
+}
+
+@media  screen and (min-height: 2603px){
+    
+    .Hero-Text button:hover, .Footer-Text button:hover{
+        opacity: 1.0;
+        cursor: none;
+     } 
+     .Meeting-Text  p{
+        text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+    }  
 }
