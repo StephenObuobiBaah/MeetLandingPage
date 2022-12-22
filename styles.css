@@ -41,7 +41,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:4rem;
+    gap:6rem;
     margin: 0 auto;
     background-color:rgb(252, 252, 252);
 }
